@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'screenshots.title': 'App Screenshots',
       'overview.title1': 'Finanztracking',
       'overview.title2': 'einfach gemacht',
-      'overview.desc': 'CashProtector macht das Tracking Ihrer Finanzen mühelos. Keine vergessenen Ausgaben mehr und keine Zeitverschwendung durch komplizierte App-Navigation.',
+      'overview.desc': 'CashCounter macht das Tracking Ihrer Finanzen mühelos. Keine vergessenen Ausgaben mehr und keine Zeitverschwendung durch komplizierte App-Navigation.',
       'overview.feature1.title': 'Einfach tippen',
       'overview.feature1.desc': 'Verwenden Sie Home-Screen-Widgets, um Ausgaben sofort zu erfassen, ohne die App zu öffnen.',
       'overview.feature2.title': 'Einfach halten',
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
       'overview.feature3.title': 'Einmal einrichten',
       'overview.feature3.desc': 'Automatische Verfolgung wiederkehrender Rechnungen und Einkommen.',
       'quote.title': 'Verfolgen Sie Ihre Finanzen, ohne Ihren Tag zu unterbrechen.',
-      'quote.subtitle': 'CashProtector passt sich Ihrem Leben an, nicht umgekehrt.',
+      'quote.subtitle': 'CashCounter passt sich Ihrem Leben an, nicht umgekehrt.',
       'privacy.title1': 'Ihre Finanzdaten gehören',
       'privacy.title2': 'nur Ihnen',
-      'privacy.subtitle': 'Bei CashProtector steht Ihre finanzielle Privatsphäre an erster Stelle.',
+      'privacy.subtitle': 'Bei CashCounter steht Ihre finanzielle Privatsphäre an erster Stelle.',
       'privacy.feature1.title': 'Keine Datenweitergabe:',
       'privacy.feature1.desc': 'Wir sammeln, greifen nicht auf Ihre Finanzdaten zu und speichern sie nicht.',
       'privacy.feature2.title': 'Keine Werbung:',
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'download.title': 'Jetzt herunterladen',
       'download.subtitle': 'Nehmen Sie die Kontrolle über Ihre persönlichen Finanzen, ohne Kompromisse bei Privatsphäre oder Sicherheit einzugehen.',
       'download.button': 'App herunterladen',
-      'download.compatibility': 'CashProtector ist für iPhone und iPad mit iOS 18 oder neuer verfügbar.',
+      'download.compatibility': 'CashCounter ist für iPhone und iPad mit iOS 18 oder neuer verfügbar.',
       'contact.title': 'Kontakt',
       'contact.subtitle': 'Haben Sie Fragen zur App? Kontaktieren Sie mich gerne!',
       'contact.support.title': 'Support erhalten',
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'ai.demo.input': 'Fragen Sie nach Budgettipps...',
       'footer.imprint': 'Impressum',
       'footer.privacy': 'Datenschutz',
-      'footer.app-privacy': 'Datenschutz CashProtector'
+      'footer.app-privacy': 'Datenschutz CashCounter'
     },
     'en': {
       'nav.home': 'Home',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'screenshots.title': 'App Screenshots',
       'overview.title1': 'Financial tracking',
       'overview.title2': 'made easy',
-      'overview.desc': 'CashProtector makes tracking your finances effortless. No more forgotten expenses and no time wasted on complicated app navigation.',
+      'overview.desc': 'CashCounter makes tracking your finances effortless. No more forgotten expenses and no time wasted on complicated app navigation.',
       'overview.feature1.title': 'Just tap',
       'overview.feature1.desc': 'Use home screen widgets to capture expenses instantly without opening the app.',
       'overview.feature2.title': 'Just hold',
@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
       'overview.feature3.title': 'Set up once',
       'overview.feature3.desc': 'Automatic tracking of recurring bills and income.',
       'quote.title': 'Track your finances without interrupting your day.',
-      'quote.subtitle': 'CashProtector adapts to your life, not the other way around.',
+      'quote.subtitle': 'CashCounter adapts to your life, not the other way around.',
       'privacy.title1': 'Your financial data belongs',
       'privacy.title2': 'only to you',
-      'privacy.subtitle': 'At CashProtector, your financial privacy comes first.',
+      'privacy.subtitle': 'At CashCounter, your financial privacy comes first.',
       'privacy.feature1.title': 'No Data Sharing:',
       'privacy.feature1.desc': 'We don\'t collect, access, or store your financial data.',
       'privacy.feature2.title': 'No Ads:',
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'download.title': 'Download Now',
       'download.subtitle': 'Take control of your personal finances without compromising on privacy or security.',
       'download.button': 'Download App',
-      'download.compatibility': 'CashProtector is available for iPhone and iPad with iOS 18 or newer.',
+      'download.compatibility': 'CashCounter is available for iPhone and iPad with iOS 18 or newer.',
       'contact.title': 'Contact',
       'contact.subtitle': 'Have questions about the app? Feel free to reach out!',
       'contact.support.title': 'Get Support',
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'ai.demo.input': 'Ask for budget tips...',
       'footer.imprint': 'Imprint',
       'footer.privacy': 'Privacy Policy',
-      'footer.app-privacy': 'CashProtector Privacy Policy'
+      'footer.app-privacy': 'CashCounter Privacy Policy'
     }
   };
   

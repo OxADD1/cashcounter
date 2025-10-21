@@ -1,6 +1,6 @@
 {
-    "name": "CashProtector",
-    "short_name": "CashProtector",
+    "name": "CashCounter",
+    "short_name": "CashCounter",
     "icons": [
       {
         "src": "./android-chrome-192x192.png",
