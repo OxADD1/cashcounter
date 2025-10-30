@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
       'features.ai.desc': '50/30/20-Regel, Ausgabenanalyse und Spartipps basierend auf Ihren echten Transaktionsdaten.',
       'features.export.title': 'Import & Export',
       'features.export.desc': 'Importieren Sie Transaktionen aus CSV-Dateien und exportieren Sie Ihre Daten für andere Tools.',
+      'features.cashcounter.title': 'Bargeld Zähler',
+      'features.cashcounter.desc': 'Zählen Sie Bargeld mit echten Münzen und Scheinen. Unterstützt 33+ Währungen mit korrekten Stückelungen.',
       'screenshots.title': 'App Screenshots',
       'overview.title1': 'Finanztracking',
       'overview.title2': 'einfach gemacht',
@@ -77,12 +79,15 @@ document.addEventListener('DOMContentLoaded', function() {
       'ai.feature2.desc': 'Entdecken Sie versteckte Sparpotentiale und erhalten Sie Tipps zur Optimierung Ihrer Ausgaben.',
       'ai.feature3.title': 'Schnellaktionen statt Tippen',
       'ai.feature3.desc': 'Sie wählen Buttons wie \'Finanzüberblick\', \'Sparanalyse\', \'Ausgabentipps\' oder \'Verfügbar zum Ausgeben\' statt Nachrichten einzutippen.',
-      'ai.demo.title': 'Finanzcoach',
-      'ai.quickaction.budget': '50/30/20 Budget',
-      'ai.quickaction.overview': 'Finanzüberblick',
-      'ai.quickaction.savings': 'Sparanalyse',
-      'ai.quickaction.expenses': 'Ausgabentipps',
-      'ai.quickaction.available': 'Verfügbar zum Ausgeben',
+      'cashcounter.title1': 'Bargeld zählen',
+      'cashcounter.title2': 'leicht gemacht',
+      'cashcounter.description': 'Zählen Sie Ihr Bargeld mit echten Münzen und Scheinen Ihrer Währung. Wählen Sie einfach die Stückelung aus und erstellen Sie automatisch eine Transaktion.',
+      'cashcounter.feature1.title': '33+ Währungen',
+      'cashcounter.feature1.desc': 'Von Euro und Dollar bis Yen und Rupien - alle mit den echten Münzen und Scheinen, die in Ihrem Land verwendet werden.',
+      'cashcounter.feature2.title': 'Echte Stückelungen',
+      'cashcounter.feature2.desc': 'Tippen Sie auf Banknoten und Münzen, um zu zählen. Die App kennt alle Denominationen wie 5€, 10€, 50 Cent, etc.',
+      'cashcounter.feature3.title': 'Automatische Transaktion',
+      'cashcounter.feature3.desc': 'Speichern Sie den gezählten Betrag direkt als Einnahme-Transaktion mit nur einem Klick.',
       'footer.imprint': 'Impressum',
       'footer.privacy': 'Datenschutz',
       'footer.app-privacy': 'Datenschutz CashCounter'
@@ -114,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
       'features.ai.desc': '50/30/20 rule, expense analysis, and savings tips based on your real transaction data.',
       'features.export.title': 'Import & Export',
       'features.export.desc': 'Import transactions from CSV files and export your data for use with other tools.',
+      'features.cashcounter.title': 'Cash Counter',
+      'features.cashcounter.desc': 'Count cash with real coins and banknotes. Supports 33+ currencies with accurate denominations.',
       'screenshots.title': 'App Screenshots',
       'overview.title1': 'Financial tracking',
       'overview.title2': 'made easy',
@@ -163,12 +170,15 @@ document.addEventListener('DOMContentLoaded', function() {
       'ai.feature2.desc': 'Discover hidden savings potential and get tips to optimize your spending.',
       'ai.feature3.title': 'Guided Quick Actions',
       'ai.feature3.desc': 'Instead of typing, choose buttons like \'Financial Overview\', \'Savings Analysis\', \'Expense Tips\', or \'Available to Spend\'.',
-      'ai.demo.title': 'Financial Coach',
-      'ai.quickaction.budget': '50/30/20 Budget',
-      'ai.quickaction.overview': 'Financial Overview',
-      'ai.quickaction.savings': 'Savings Analysis',
-      'ai.quickaction.expenses': 'Expense Tips',
-      'ai.quickaction.available': 'Available to Spend',
+      'cashcounter.title1': 'Count cash',
+      'cashcounter.title2': 'made simple',
+      'cashcounter.description': 'Count your cash with real coins and banknotes of your currency. Simply select the denomination and automatically create a transaction.',
+      'cashcounter.feature1.title': '33+ Currencies',
+      'cashcounter.feature1.desc': 'From Euro and Dollar to Yen and Rupees - all with the real coins and bills used in your country.',
+      'cashcounter.feature2.title': 'Real Denominations',
+      'cashcounter.feature2.desc': 'Tap on banknotes and coins to count. The app knows all denominations like €5, €10, 50 cents, etc.',
+      'cashcounter.feature3.title': 'Automatic Transaction',
+      'cashcounter.feature3.desc': 'Save the counted amount directly as an income transaction with just one click.',
       'footer.imprint': 'Imprint',
       'footer.privacy': 'Privacy Policy',
       'footer.app-privacy': 'CashCounter Privacy Policy'
@@ -274,156 +284,76 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // AI Chat Demo Functionality
-  const aiChatMessages = document.getElementById('aiChatMessages');
-  
-  const demoConversations = {
-    'de': [
-      {
-        type: 'ai',
-        text: 'Hallo! Ich bin dein Finanzcoach. Wähle eine Schnellaktion, damit ich dich unterstützen kann.',
-        delay: 500
-      },
-      {
-        type: 'user',
-        text: '👉 50/30/20 Budget',
-        delay: 2000
-      },
-      {
-        type: 'ai',
-        text: `Alles klar! Ich habe deine letzten Ausgaben geprüft und nach 50/30/20 verteilt:
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxPrev = document.querySelector('.lightbox-prev');
+  const lightboxNext = document.querySelector('.lightbox-next');
+  const screenshots = document.querySelectorAll('.clickable-screenshot');
+  let currentImageIndex = 0;
 
-💰 50% für Notwendiges
-🎉 30% für Wünsche
-💳 20% für Sparen und Schuldenabbau
-
-Du kannst die Kategorien jederzeit anpassen.`,
-        delay: 3500
-      },
-      {
-        type: 'user',
-        text: '👉 Ausgabentipps',
-        delay: 5500
-      },
-      {
-        type: 'ai',
-        text: 'Hier sind drei schnelle Spartipps basierend auf deinen Ausgaben der letzten Monate. Wähle einfach die nächste Schnellaktion, wenn du mehr brauchst. 📊',
-        delay: 6500
-      }
-    ],
-    'en': [
-      {
-        type: 'ai',
-        text: "Hi! I'm your financial coach. Choose a quick action and I'll take it from there.",
-        delay: 500
-      },
-      {
-        type: 'user',
-        text: '👉 50/30/20 Budget',
-        delay: 2000
-      },
-      {
-        type: 'ai',
-        text: `Great! I reviewed your recent spending and applied the 50/30/20 split:
-
-💰 50% for essentials
-🎉 30% for nice-to-haves
-💳 20% for savings and debt
-
-Feel free to adjust the categories at any time.`,
-        delay: 3500
-      },
-      {
-        type: 'user',
-        text: '👉 Expense Tips',
-        delay: 5500
-      },
-      {
-        type: 'ai',
-        text: "Here are a few quick savings tips based on your spending. Pick another quick action whenever you're ready. 📊",
-        delay: 6500
-      }
-    ]
-  };
-
-  function createMessage(type, text, isTyping = false) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `chat-message ${type}`;
-    
-    const avatar = document.createElement('div');
-    avatar.className = `message-avatar ${type}`;
-    avatar.innerHTML = type === 'ai' ? '🤖' : '👤';
-    
-    const bubble = document.createElement('div');
-    bubble.className = `message-bubble ${type}`;
-    
-    if (isTyping) {
-      bubble.innerHTML = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
-    } else {
-      bubble.textContent = text;
-    }
-    
-    messageDiv.appendChild(avatar);
-    messageDiv.appendChild(bubble);
-    
-    return messageDiv;
+  function openLightbox(index) {
+    currentImageIndex = index;
+    const img = screenshots[currentImageIndex];
+    lightboxImg.src = img.src;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
   }
 
-  function addMessage(type, text, delay = 0) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        // Add typing indicator for AI messages
-        let typingMessage;
-        if (type === 'ai') {
-          typingMessage = createMessage('ai', '', true);
-          aiChatMessages.appendChild(typingMessage);
-          aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-        }
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
 
-        // Remove typing indicator and add real message after a delay
-        setTimeout(() => {
-          if (typingMessage) {
-            typingMessage.remove();
-          }
-          
-          const message = createMessage(type, text);
-          aiChatMessages.appendChild(message);
-          aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-          resolve();
-        }, type === 'ai' ? 1500 : 0);
-      }, delay);
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % screenshots.length;
+    lightboxImg.src = screenshots[currentImageIndex].src;
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + screenshots.length) % screenshots.length;
+    lightboxImg.src = screenshots[currentImageIndex].src;
+  }
+
+  // Add click event to all screenshots
+  screenshots.forEach((screenshot, index) => {
+    screenshot.addEventListener('click', () => {
+      openLightbox(index);
     });
-  }
+  });
 
-  async function startAIChatDemo() {
-    if (!aiChatMessages) return;
-    
-    // Clear existing messages
-    aiChatMessages.innerHTML = '';
-    
-    const conversation = demoConversations[currentLang] || demoConversations['de'];
-    
-    for (const message of conversation) {
-      await addMessage(message.type, message.text, message.delay);
+  // Close lightbox
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  // Click outside image to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
     }
-    
-    // Restart demo after completion
-    setTimeout(() => {
-      startAIChatDemo();
-    }, 8000);
-  }
+  });
 
-  // Start demo when page loads
-  setTimeout(() => {
-    startAIChatDemo();
-  }, 1000);
+  // Navigation buttons
+  lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showNextImage();
+  });
 
-  // Restart demo when language changes
-  const originalUpdateContent = updateContent;
-  updateContent = function(lang) {
-    originalUpdateContent(lang);
-    setTimeout(() => {
-      startAIChatDemo();
-    }, 500);
-  };
+  lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showPrevImage();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowRight') {
+      showNextImage();
+    } else if (e.key === 'ArrowLeft') {
+      showPrevImage();
+    }
+  });
 });
