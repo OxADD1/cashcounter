@@ -69,16 +69,20 @@ document.addEventListener('DOMContentLoaded', function() {
       'contact.support.desc': 'Bei Fragen zur App oder für Feedback können Sie mich über folgende Wege erreichen:',
       'contact.support.email': 'E-Mail',
       'ai.title1': 'Treffen Sie Ihren persönlichen',
-      'ai.title2': 'KI-Finanzcoach',
-      'ai.description': 'Lassen Sie sich von künstlicher Intelligenz dabei helfen, bessere Finanzentscheidungen zu treffen. Unser KI-Coach analysiert Ihre Ausgabenmuster und gibt Ihnen personalisierte Empfehlungen.',
-      'ai.feature1.title': 'Intelligente Budgetplanung',
-      'ai.feature1.desc': 'Erstellen Sie automatisch Budgets basierend auf der bewährten 50/30/20-Regel und Ihren echten Ausgabendaten.',
+      'ai.title2': 'Finanzcoach',
+      'ai.description': 'Steuern Sie den Finanzcoach über Buttons wie \'50/30/20 Budget\', \'Finanzüberblick\' oder \'Ausgabentipps\'. Ein Tipp reicht - kein Chat-Tippen nötig.',
+      'ai.feature1.title': '50/30/20-Budgetregel',
+      'ai.feature1.desc': 'Der Button \'50/30/20 Budget\' verteilt Ihre Ausgaben automatisch auf Notwendiges, Wünsche sowie Sparen und Schuldenabbau.',
       'ai.feature2.title': 'Ausgabenanalyse',
       'ai.feature2.desc': 'Entdecken Sie versteckte Sparpotentiale und erhalten Sie Tipps zur Optimierung Ihrer Ausgaben.',
-      'ai.feature3.title': 'Personalisierte Spartipps',
-      'ai.feature3.desc': 'Erhalten Sie maßgeschneiderte Empfehlungen basierend auf Ihren individuellen Finanzgewohnheiten.',
-      'ai.demo.title': 'KI-Finanzcoach',
-      'ai.demo.input': 'Fragen Sie nach Budgettipps...',
+      'ai.feature3.title': 'Schnellaktionen statt Tippen',
+      'ai.feature3.desc': 'Sie wählen Buttons wie \'Finanzüberblick\', \'Sparanalyse\', \'Ausgabentipps\' oder \'Verfügbar zum Ausgeben\' statt Nachrichten einzutippen.',
+      'ai.demo.title': 'Finanzcoach',
+      'ai.quickaction.budget': '50/30/20 Budget',
+      'ai.quickaction.overview': 'Finanzüberblick',
+      'ai.quickaction.savings': 'Sparanalyse',
+      'ai.quickaction.expenses': 'Ausgabentipps',
+      'ai.quickaction.available': 'Verfügbar zum Ausgeben',
       'footer.imprint': 'Impressum',
       'footer.privacy': 'Datenschutz',
       'footer.app-privacy': 'Datenschutz CashCounter'
@@ -151,16 +155,20 @@ document.addEventListener('DOMContentLoaded', function() {
       'contact.support.desc': 'For questions about the app or to provide feedback, you can reach me through:',
       'contact.support.email': 'Email',
       'ai.title1': 'Meet Your Personal',
-      'ai.title2': 'AI Financial Coach',
-      'ai.description': 'Let artificial intelligence help you make better financial decisions. Our AI coach analyzes your spending patterns and gives you personalized recommendations.',
-      'ai.feature1.title': 'Smart Budget Planning',
-      'ai.feature1.desc': 'Automatically create budgets based on the proven 50/30/20 rule and your real spending data.',
+      'ai.title2': 'Financial Coach',
+      'ai.description': 'Control the coach with predefined quick actions like \'50/30/20 Budget\', \'Financial Overview\', or \'Expense Tips\'. One tap, no typing.',
+      'ai.feature1.title': '50/30/20 Budget Rule',
+      'ai.feature1.desc': 'Tap \'50/30/20 Budget\' and the coach allocates your money across needs, wants, and savings automatically.',
       'ai.feature2.title': 'Expense Analysis',
       'ai.feature2.desc': 'Discover hidden savings potential and get tips to optimize your spending.',
-      'ai.feature3.title': 'Personalized Savings Tips',
-      'ai.feature3.desc': 'Get tailored recommendations based on your individual financial habits.',
-      'ai.demo.title': 'AI Financial Coach',
-      'ai.demo.input': 'Ask for budget tips...',
+      'ai.feature3.title': 'Guided Quick Actions',
+      'ai.feature3.desc': 'Instead of typing, choose buttons like \'Financial Overview\', \'Savings Analysis\', \'Expense Tips\', or \'Available to Spend\'.',
+      'ai.demo.title': 'Financial Coach',
+      'ai.quickaction.budget': '50/30/20 Budget',
+      'ai.quickaction.overview': 'Financial Overview',
+      'ai.quickaction.savings': 'Savings Analysis',
+      'ai.quickaction.expenses': 'Expense Tips',
+      'ai.quickaction.available': 'Available to Spend',
       'footer.imprint': 'Imprint',
       'footer.privacy': 'Privacy Policy',
       'footer.app-privacy': 'CashCounter Privacy Policy'
@@ -273,54 +281,66 @@ document.addEventListener('DOMContentLoaded', function() {
     'de': [
       {
         type: 'ai',
-        text: 'Hallo! Ich bin Ihr persönlicher KI-Finanzcoach. Wie kann ich Ihnen heute bei Ihren Finanzen helfen?',
+        text: 'Hallo! Ich bin dein Finanzcoach. Wähle eine Schnellaktion, damit ich dich unterstützen kann.',
         delay: 500
       },
       {
         type: 'user',
-        text: 'Kannst du mir bei der Budgetplanung helfen?',
+        text: '👉 50/30/20 Budget',
         delay: 2000
       },
       {
         type: 'ai',
-        text: 'Gerne! Basierend auf Ihren Ausgabendaten der letzten 3 Monate empfehle ich die 50/30/20-Regel:\n\n💰 50% für Notwendigkeiten (Miete, Lebensmittel)\n🎉 30% für Wünsche (Entertainment, Hobbys)\n💳 20% für Sparen und Schuldenabbau\n\nMöchten Sie ein personalisiertes Budget erstellen?',
+        text: `Alles klar! Ich habe deine letzten Ausgaben geprüft und nach 50/30/20 verteilt:
+
+💰 50% für Notwendiges
+🎉 30% für Wünsche
+💳 20% für Sparen und Schuldenabbau
+
+Du kannst die Kategorien jederzeit anpassen.`,
         delay: 3500
       },
       {
         type: 'user',
-        text: 'Ja, das klingt gut!',
+        text: '👉 Ausgabentipps',
         delay: 5500
       },
       {
         type: 'ai',
-        text: 'Perfekt! Ich analysiere Ihre Transaktionen und erstelle ein maßgeschneidertes Budget. Sie können alles in der App anpassen. 📊',
+        text: 'Hier sind drei schnelle Spartipps basierend auf deinen Ausgaben der letzten Monate. Wähle einfach die nächste Schnellaktion, wenn du mehr brauchst. 📊',
         delay: 6500
       }
     ],
     'en': [
       {
         type: 'ai',
-        text: 'Hello! I\'m your personal AI financial coach. How can I help you with your finances today?',
+        text: "Hi! I'm your financial coach. Choose a quick action and I'll take it from there.",
         delay: 500
       },
       {
         type: 'user',
-        text: 'Can you help me with budget planning?',
+        text: '👉 50/30/20 Budget',
         delay: 2000
       },
       {
         type: 'ai',
-        text: 'Of course! Based on your spending data from the last 3 months, I recommend the 50/30/20 rule:\n\n💰 50% for needs (rent, groceries)\n🎉 30% for wants (entertainment, hobbies)\n💳 20% for savings and debt repayment\n\nWould you like to create a personalized budget?',
+        text: `Great! I reviewed your recent spending and applied the 50/30/20 split:
+
+💰 50% for essentials
+🎉 30% for nice-to-haves
+💳 20% for savings and debt
+
+Feel free to adjust the categories at any time.`,
         delay: 3500
       },
       {
         type: 'user',
-        text: 'Yes, that sounds great!',
+        text: '👉 Expense Tips',
         delay: 5500
       },
       {
         type: 'ai',
-        text: 'Perfect! I\'ll analyze your transactions and create a tailored budget. You can adjust everything in the app. 📊',
+        text: "Here are a few quick savings tips based on your spending. Pick another quick action whenever you're ready. 📊",
         delay: 6500
       }
     ]

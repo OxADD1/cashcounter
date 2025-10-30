@@ -299,9 +299,9 @@
         <div class="col-lg-6 mb-4 mb-lg-0">
           <h2 class="section-heading">
             <span data-i18n="ai.title1">Treffen Sie Ihren persönlichen</span><br>
-            <span class="text-primary" data-i18n="ai.title2">KI-Finanzcoach</span>
+            <span class="text-primary" data-i18n="ai.title2">Finanzcoach</span>
           </h2>
-          <p class="lead mb-4" data-i18n="ai.description">Lassen Sie sich von künstlicher Intelligenz dabei helfen, bessere Finanzentscheidungen zu treffen. Unser KI-Coach analysiert Ihre Ausgabenmuster und gibt Ihnen personalisierte Empfehlungen.</p>
+          <p class="lead mb-4" data-i18n="ai.description">Steuern Sie den Finanzcoach über Buttons wie '50/30/20 Budget', 'Finanzüberblick' oder 'Ausgabentipps'. Ein Tipp reicht - kein Chat-Tippen nötig.</p>
           
           <div class="ai-features-list">
             <div class="d-flex mb-3">
@@ -309,8 +309,8 @@
                 <i class="fas fa-brain text-primary fs-4"></i>
               </div>
               <div>
-                <h5 data-i18n="ai.feature1.title">Intelligente Budgetplanung</h5>
-                <p data-i18n="ai.feature1.desc">Erstellen Sie automatisch Budgets basierend auf der bewährten 50/30/20-Regel und Ihren echten Ausgabendaten.</p>
+                <h5 data-i18n="ai.feature1.title">50/30/20-Budgetregel</h5>
+                <p data-i18n="ai.feature1.desc">Der Button '50/30/20 Budget' verteilt Ihre Ausgaben automatisch auf Notwendiges, Wünsche sowie Sparen und Schuldenabbau.</p>
               </div>
             </div>
             
@@ -329,8 +329,8 @@
                 <i class="fas fa-piggy-bank text-primary fs-4"></i>
               </div>
               <div>
-                <h5 data-i18n="ai.feature3.title">Personalisierte Spartipps</h5>
-                <p data-i18n="ai.feature3.desc">Erhalten Sie maßgeschneiderte Empfehlungen basierend auf Ihren individuellen Finanzgewohnheiten.</p>
+                <h5 data-i18n="ai.feature3.title">Schnellaktionen statt Tippen</h5>
+                <p data-i18n="ai.feature3.desc">Sie wählen Buttons wie 'Finanzüberblick', 'Sparanalyse', 'Ausgabentipps' oder 'Verfügbar zum Ausgeben' statt Nachrichten einzutippen.</p>
               </div>
             </div>
           </div>
@@ -341,16 +341,17 @@
             <div class="chat-container">
               <div class="chat-header">
                 <i class="fas fa-robot me-2"></i>
-                <span data-i18n="ai.demo.title">KI-Finanzcoach</span>
+                <span data-i18n="ai.demo.title">Finanzcoach</span>
               </div>
               <div class="chat-messages" id="aiChatMessages">
                 <!-- Messages will be populated by JavaScript -->
               </div>
-              <div class="chat-input-demo">
-                <input type="text" class="form-control" data-i18n-placeholder="ai.demo.input" placeholder="Fragen Sie nach Budgettipps..." readonly>
-                <button class="btn btn-primary">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
+              <div class="chat-quick-actions">
+                <button type="button" class="quick-action" data-i18n="ai.quickaction.budget">50/30/20 Budget</button>
+                <button type="button" class="quick-action" data-i18n="ai.quickaction.overview">Finanzüberblick</button>
+                <button type="button" class="quick-action" data-i18n="ai.quickaction.savings">Sparanalyse</button>
+                <button type="button" class="quick-action" data-i18n="ai.quickaction.expenses">Ausgabentipps</button>
+                <button type="button" class="quick-action" data-i18n="ai.quickaction.available">Verfügbar zum Ausgeben</button>
               </div>
             </div>
           </div>
