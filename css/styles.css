@@ -112,6 +112,15 @@ body {
 .navbar-brand {
   color: var(--primary);
   font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
 }
 
 .section-heading {
