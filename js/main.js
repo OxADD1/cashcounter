@@ -2127,14 +2127,36 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update document language
     document.documentElement.lang = lang;
 
+    // Map language codes to folder names in img/ directory
+    const languageFolders = {
+      'de': 'Cash Counter Deutsch',
+      'en': 'Cash Counter englisch',
+      'es': 'Cash Counter spanisch',
+      'fr': 'Cash Counter franösisch',
+      'it': 'Cash Counter italienisch',
+      'nl': 'Cash Counter niederländisch',
+      'pl': 'Cash Counter polnisch',
+      'pt': 'Cash Counter portugal',
+      'ru': 'Cash Counter russisch',
+      'sv': 'Cash Counter swedisch',
+      'tr': 'Cash Counter türkisch',
+      'uk': 'Cash Counter ukrainisch',
+      'ar': 'Cash Counter arabisch',
+      'hi': 'Cash Counter hindi',
+      'ja': 'Cash Counter japanisch',
+      'ko': 'Cash Counter koreanisch',
+      'th': 'Cash Counter thai',
+      'vi': 'Cash Counter vietnamesisch',
+      'zh-CN': 'Cash Counter chinesisch vereinfacht',
+      'da': 'Cash Counter dänisch'
+    };
+
     // Update screenshot images
     document.querySelectorAll('.screenshot-img').forEach(img => {
       const imgId = img.getAttribute('data-img-id');
-      if (lang === 'de') {
-        img.src = `./img/Deutsch/${imgId}.jpg`;
-      } else {
-        img.src = `./img/Englisch/${imgId}.jpg`;
-      }
+      // Default to English if language folder doesn't exist, or use specific folder
+      const folderName = languageFolders[lang] || 'Cash Counter englisch';
+      img.src = `./img/${folderName}/${imgId}.jpg`;
     });
 
     // Update language buttons
