@@ -2168,32 +2168,32 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Update current language label in navbar
+    // Update current language label in navbar (flag only)
     const currentLangLabel = document.querySelector('.current-lang-label');
     if (currentLangLabel) {
-      const langNames = {
-        'de': '🇩🇪 Deutsch',
-        'en': '🇬🇧 English',
-        'es': '🇪🇸 Español',
-        'fr': '🇫🇷 Français',
-        'it': '🇮🇹 Italiano',
-        'nl': '🇳🇱 Nederlands',
-        'pl': '🇵🇱 Polski',
-        'pt': '🇵🇹 Português',
-        'ru': '🇷🇺 Русский',
-        'sv': '🇸🇪 Svenska',
-        'tr': '🇹🇷 Türkçe',
-        'uk': '🇺🇦 Українська',
-        'ar': '🇸🇦 العربية',
-        'hi': '🇮🇳 हिन्दी',
-        'ja': '🇯🇵 日本語',
-        'ko': '🇰🇷 한국어',
-        'th': '🇹🇭 ไทย',
-        'vi': '🇻🇳 Tiếng Việt',
-        'zh-CN': '🇨🇳 简体中文',
-        'da': '🇩🇰 Dansk'
+      const langFlags = {
+        'de': '🇩🇪',
+        'en': '🇬🇧',
+        'es': '🇪🇸',
+        'fr': '🇫🇷',
+        'it': '🇮🇹',
+        'nl': '🇳🇱',
+        'pl': '🇵🇱',
+        'pt': '🇵🇹',
+        'ru': '🇷🇺',
+        'sv': '🇸🇪',
+        'tr': '🇹🇷',
+        'uk': '🇺🇦',
+        'ar': '🇸🇦',
+        'hi': '🇮🇳',
+        'ja': '🇯🇵',
+        'ko': '🇰🇷',
+        'th': '🇹🇭',
+        'vi': '🇻🇳',
+        'zh-CN': '🇨🇳',
+        'da': '🇩🇰'
       };
-      currentLangLabel.textContent = langNames[lang] || lang.toUpperCase();
+      currentLangLabel.textContent = langFlags[lang] || lang.toUpperCase();
     }
 
     // Update current language

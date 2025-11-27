@@ -77,9 +77,43 @@
         <img src="./img/logo.png" alt="Logo Adrian Eberhardt">
         Adrian Eberhardt
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
+      <div class="navbar-right-controls">
+        <!-- Separate Language Switcher (outside collapse) -->
+        <div class="dropdown language-switcher">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="current-lang-label">🇩🇪</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item language-btn active" href="#" data-lang="de">🇩🇪 Deutsch</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="en">🇬🇧 English</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="es">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="fr">🇫🇷 Français</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="it">🇮🇹 Italiano</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="nl">🇳🇱 Nederlands</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="pl">🇵🇱 Polski</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="pt">🇵🇹 Português</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="ru">🇷🇺 Русский</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="sv">🇸🇪 Svenska</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="tr">🇹🇷 Türkçe</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="uk">🇺🇦 Українська</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="ar">🇸🇦 العربية</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="hi">🇮🇳 हिन्दी</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="ja">🇯🇵 日本語</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="ko">🇰🇷 한국어</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="th">🇹🇭 ไทย</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="zh-CN">🇨🇳 简体中文</a></li>
+            <li><a class="dropdown-item language-btn" href="#" data-lang="da">🇩🇰 Dansk</a></li>
+          </ul>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -90,35 +124,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact" data-i18n="nav.contact">Kontakt</a>
-          </li>
-          <li class="nav-item dropdown language-switcher">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span class="current-lang-label">DE</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"
-              style="max-height: 400px; overflow-y: auto;">
-              <li><a class="dropdown-item language-btn active" href="#" data-lang="de">🇩🇪 Deutsch</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="en">🇬🇧 English</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="es">🇪🇸 Español</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="fr">🇫🇷 Français</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="it">🇮🇹 Italiano</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="nl">🇳🇱 Nederlands</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="pl">🇵🇱 Polski</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="pt">🇵🇹 Português</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="ru">🇷🇺 Русский</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="sv">🇸🇪 Svenska</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="tr">🇹🇷 Türkçe</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="uk">🇺🇦 Українська</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="ar">🇸🇦 العربية</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="hi">🇮🇳 हिन्दी</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="ja">🇯🇵 日本語</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="ko">🇰🇷 한국어</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="th">🇹🇭 ไทย</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="vi">🇻🇳 Tiếng Việt</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="zh-CN">🇨🇳 简体中文</a></li>
-              <li><a class="dropdown-item language-btn" href="#" data-lang="da">🇩🇰 Dansk</a></li>
-            </ul>
           </li>
         </ul>
       </div>
